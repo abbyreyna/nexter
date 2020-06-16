@@ -37,13 +37,13 @@ body {
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(
-      6rem,
-      1fr
-    ) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(
-      6rem,
-      1fr
-    ) [full-end]; //14rem = 140px, 8rem for sidebar & 14rem for other columns
+  grid-template-columns:
+    [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr)
+    [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    ) [center-end] minmax(6rem, 1fr)
+    [full-end]; //14rem = 140px, 8rem for sidebar & 14rem for other columns
   //added the two '1fr' on each side to occupy the remaining 'fractional space' in order to center the 8 columns in the middle
 
   //targeting container and all of the direct children
